@@ -13,14 +13,14 @@
     }
 
     /* Style for the slideshow container */
-    .slideshow-container {
+    .main-container {
       max-width: 1000px;
       position: relative;
       margin: auto;
     }
 
     /* Style for the images */
-    .slideshow-container img {
+    .main-container img {
       width: 100%;
       height: auto;
     }
@@ -79,7 +79,8 @@
     .grid-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      width: 1000px;
+      max-width: 1000px;
+      position: relative;
       gap: 10px;
       margin: auto;
     }
@@ -111,8 +112,8 @@
     }
 
     li {
-      margin-right: 50px;
-      margin-left: 50px;
+      margin-right: 5vw;
+      margin-left: 5vw;
     }
 
     a {
@@ -126,13 +127,14 @@
       align-items: center;
       display: flex;
       justify-content: center;
+      position: relative;
     }
   </style>
 </head>
 
 <body style="background-color:#181818;   color: white;">
 
-  <div class="slideshow-container">
+  <div class="main-container">
     <a href="https://freezestudios.github.io/">
       <img src="images/kAM2V0.png" style="width: 50%;">
     </a>
@@ -256,7 +258,9 @@
     </ul>
   </div>
 
-  <img src="images/ProfileBackdrop.gif" width="1000px" style="display: block; margin-right: auto; margin-left: auto;">
+  <div class="main-container">
+    <img src="images/ProfileBackdrop.gif">
+  </div>
   <p style="text-align: center;">FREEZESTUDIOS 2023</p>
 
 </body>

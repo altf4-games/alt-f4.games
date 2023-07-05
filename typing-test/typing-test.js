@@ -18,6 +18,7 @@ let validKeys = "abcdefghijklmnopqrstuvwxyz ";
 
 let dispalyTime = 30;
 let firstKey = false;
+let completed = false;
 let time = 0;
 
 window.addEventListener('keydown', function (e) {
@@ -39,6 +40,7 @@ button.addEventListener("click", function() {
 
 function HandleInput(key)
 {
+    if(completed) return;
     if(!firstKey)
     {
         setTimeout(Timer, 1000);
@@ -122,6 +124,7 @@ function MoveCaret(index)
 }
 
 function Timer() {
+    if(completed) return;
     dispalyTime--;
     time++;
     document.getElementById("timer").innerHTML = dispalyTime;
@@ -134,6 +137,7 @@ function Timer() {
 
 function CalculateWPM()
 {
+    completed = true;
     let totalWords = str.split(' ').length;
     let wordCount = 0;
     let inputArray = input.split(' ');

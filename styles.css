@@ -1,0 +1,151 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color:#181818;   
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+.main-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.main-container img {
+    width: 100%;
+    height: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active {
+    background-color: #717171;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1000px;
+    position: relative;
+    gap: 10px;
+    margin: auto;
+}
+
+.grid-item {
+    width: 100%;
+}
+
+.grid-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+h2 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 5vw;
+    margin-left: 5vw;
+}
+
+#websites {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+.links {
+    margin: auto;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+/* Nav Bar */
+.navbar {
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+}
+        
+.navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    margin-right: 20px;
+}
+        
+.navbar-link {
+    display: inline-block;
+    margin-right: 10px;
+}
+        
+.navbar-link a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px;
+    transition: background-color 0.3s;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+#header-img {
+    width: 60%;
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}

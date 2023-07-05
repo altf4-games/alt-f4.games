@@ -7,138 +7,26 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-  <style>
-    /* Apply Font */
-    body {
-      font-family: 'Open Sans', sans-serif;
-    }
-
-    /* Style for the slideshow container */
-    .main-container {
-      max-width: 1000px;
-      position: relative;
-      margin: auto;
-    }
-
-    /* Style for the images */
-    .main-container img {
-      width: 100%;
-      height: auto;
-    }
-
-    /* Style for the previous/next buttons */
-    .prev,
-    .next {
-      cursor: pointer;
-      position: absolute;
-      top: 50%;
-      width: auto;
-      padding: 16px;
-      margin-top: -22px;
-      color: white;
-      font-weight: bold;
-      font-size: 18px;
-      transition: 0.6s ease;
-      border-radius: 0 3px 3px 0;
-    }
-
-    /* Style for the previous button */
-    .prev {
-      left: 0;
-    }
-
-    /* Style for the next button */
-    .next {
-      right: 0;
-      border-radius: 3px 0 0 3px;
-    }
-
-    /* Style for the dots (indicators) */
-    .dot {
-      height: 15px;
-      width: 15px;
-      margin: 0 2px;
-      background-color: #bbb;
-      border-radius: 50%;
-      display: inline-block;
-      transition: background-color 0.6s ease;
-    }
-
-    /* Style for the active dot (indicator) */
-    .active {
-      background-color: #717171;
-    }
-
-    /* Style for container*/
-    .container {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 20px;
-    }
-
-    /* Grid styles */
-    .grid-container {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      max-width: 1000px;
-      position: relative;
-      gap: 10px;
-      margin: auto;
-    }
-
-    .grid-item {
-      width: 100%;
-    }
-
-    .grid-item img {
-      max-width: 100%;
-      height: auto;
-    }
-
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    /* Links */
-    ul {
-      list-style: none;
-      padding: 0;
-      display: flex;
-    }
-
-    li {
-      margin-right: 5vw;
-      margin-left: 5vw;
-    }
-
-    a {
-      text-decoration: none;
-      color: inherit;
-      font-weight: bold;
-    }
-
-    .links {
-      margin: auto;
-      align-items: center;
-      display: flex;
-      justify-content: center;
-      position: relative;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 
-<body style="background-color:#181818;   color: white;">
+<body style="background-color:#181818; color: white;">
+
+  <nav class="navbar">
+    <div class="navbar-links" style="max-width: 1020px;position: relative; margin: auto;">
+      <div class="navbar-link"><a href="https://freezestudios.github.io/">Home</a></div>
+      <div class="navbar-link"><a href="https://freezestudios.github.io/projects.html">Projects</a></div>
+      <div class="navbar-link"><a href="#">About</a></div>
+    </div>
+  </nav>
 
   <div class="main-container">
     <a href="https://freezestudios.github.io/">
       <img src="images/kAM2V0.png" style="width: 50%;">
-    </a>
+  </a>
+
+  <div class="main-container">
+
     <!-- The images -->
     <img class="img" src="images/Screenie_02g.png" alt="Image 1">
     <img class="img" src="images/JXwc5k.png" alt="Image 2">
@@ -173,47 +61,7 @@
     <span class="dot" onclick="currentSlide(10)"></span>
 
   </div>
-
-  <script>
-    // JavaScript code
-    var slideIndex = 1;
-    showSlides(slideIndex);
-
-    // Function to change the slide
-    function changeSlide(n) {
-      showSlides(slideIndex += n);
-    }
-
-    // Function to display the current slide
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("img");
-      var dots = document.getElementsByClassName("dot");
-
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-      }
-
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-      dots[slideIndex - 1].className += " active";
-    }
-  </script>
+  <script src="index.js"></script>
 
   <h1> LATEST GAME</h1>
   <p align="center">
@@ -245,10 +93,10 @@
   <h1>LINKS</h1>
   <div class="links">
     <ul>
-      <li><a href="https://freezestudios.itch.io/">
+      <li><a id="websites" href="https://freezestudios.itch.io/">
           <h1>ITCH.IO </h1>
         </a></li>
-      <li><a href="https://github.com/FreezeStudios">
+      <li><a id="websites" href="https://github.com/FreezeStudios">
           <h1>GITHUB</h1>
         </a></li>
     </ul>

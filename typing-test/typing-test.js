@@ -1,11 +1,9 @@
 let str = "the quick brown fox jumps over the lazy dog exciting adventure awaits in the enchanted forest beautiful flowers bloom in vibrant colors majestic mountains stand tall against the azure sky serene lakes shimmer under the gentle moonlight a melodious song fills the air as birds sing harmoniously brilliant fireworks light up the night sky whispering winds carry secrets through the ancient trees busy streets bustle with life as people rush to their destinations delicious aromas waft from the bustling cafes silky sand tickles toes on sunny beaches quaint cottages line the cobblestone streets charming shops display unique treasures that beckon to be discovered vibrant markets bustle with colors and scents ancient ruins whisper tales of the past glimmering stars adorn the night sky as a crescent moon watches over the world inspiring books transport minds to different realms with their vivid stories sparkling fountains dance in the sunlight while children laugh with joy tranquil temples offer solace and peace to weary souls endless possibilities await those who embrace the unknown timeless wisdom guides us on our journey kind-hearted friends lend a helping hand during difficult times juicy strawberries tempt taste buds with their sweetness captivating artworks evoke emotions and ignite imagination rainy days create a cozy atmosphere for curling up with a good book thunderous applause fills the concert hall as the orchestra performs a breathtaking symphony the scent of freshly brewed coffee awakens the senses on a crisp morning breeze wise elders share their stories around the crackling fireplace twinkling fairy lights create a magical ambiance in the garden soothing raindrops create a rhythmic melody on the roof a gentle breeze rustles through the autumn leaves as they fall to the ground delightful laughter echoes through the playground as children play games of tag and hide-and-seek intricate lace patterns adorn the wedding dress of the blushing bride colorful kites soar high in the sky during a windy day a lively street parade";
 let words = str.split(' ');
-console.log(words);
 
 shuffleArray(words);
 words = words.splice(50,50);
 str = words.join(' ');
-console.log(words);
 
 let wordsContainer = document.getElementById("words");
 let correctCharacters = [words.length];

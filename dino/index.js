@@ -6,6 +6,7 @@ let savedDinos = [];
 let score = 0;
 let highScore = 0;
 let counter = 0;
+let spawnRate = 60;
 
 let cactiSprite_1;
 let cactiSprite_2;
@@ -32,13 +33,13 @@ function draw() {
   background(255);
   showScore();
 
-  if (counter % 60 === 0) {
+  if (counter % spawnRate === 0) {
     obstacles.push(new Obstacle());
   }
   counter++;
 
   if (dinos.length === 0) {
-    if (score > highScore) highScore = counter;
+    if (counter > highScore) highScore = counter;
     counter = 0;
     score = 0;
     obstacles = [];

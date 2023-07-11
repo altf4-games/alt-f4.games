@@ -4,7 +4,7 @@ class Obstacle {
     this.w = 50;
     this.h = random(50, 70);
     this.x = width;
-    this.speed = 10 + score / 10;
+    this.speed = 10 + score / 20;
   }
 
   update() {

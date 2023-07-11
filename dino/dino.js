@@ -14,7 +14,7 @@ class Dino {
     if (brain) {
       this.brain = brain.copy();
     } else {
-      this.brain = new NeuralNetwork(3, 8, 2);
+      this.brain = new NeuralNetwork(3, 4, 2);
     }
   }
 

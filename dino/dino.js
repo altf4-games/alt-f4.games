@@ -3,7 +3,7 @@ class Dino {
     this.x = 50;
     this.y = height - 50;
     this.gravity = 0.6;
-    this.lift = -15;
+    this.lift = -13;
     this.velocity = 0;
     this.jumping = false;
     this.size_x = 50;

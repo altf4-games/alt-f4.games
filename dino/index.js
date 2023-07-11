@@ -4,9 +4,10 @@ let dinos = [];
 let obstacles = [];
 let savedDinos = [];
 let score = 0;
+let displayScore = 0;
 let highScore = 0;
 let counter = 0;
-let spawnRate = 60;
+let spawnRate = 50;
 
 let cactiSprite_1;
 let cactiSprite_2;
@@ -27,6 +28,7 @@ function setup() {
   }
   tf.setBackend("cpu");
   createCanvas(800, 300);
+  setTimeout(updateScore, 60);
 }
 
 function draw() {
@@ -39,8 +41,9 @@ function draw() {
   counter++;
 
   if (dinos.length === 0) {
-    if (counter > highScore) highScore = counter;
+    if (displayScore > highScore) highScore = displayScore;
     counter = 0;
+    displayScore=0;
     score = 0;
     obstacles = [];
     obstacles.push(new Obstacle());
@@ -74,8 +77,14 @@ function showScore() {
   push();
   fill(0);
   textSize(16);
-  text("score: " + counter, 10, 20);
+  text("score: " + displayScore, 10, 20);
   text("high score: " + highScore, 10, 40);
   text("generation: " + generation, 10, 60);
   pop();
+}
+
+function updateScore()
+{
+  displayScore++;
+  setTimeout(updateScore, 60);
 }

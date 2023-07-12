@@ -14,7 +14,7 @@ class Dino {
     if (brain) {
       this.brain = brain.copy();
     } else {
-      this.brain = new NeuralNetwork(3, 8, 2);
+      this.brain = new NeuralNetwork(5, 8, 2);
     }
   }
 
@@ -62,6 +62,8 @@ class Dino {
     inputs[0] = this.y / height;
     inputs[1] = closest.x / width;
     inputs[2] = this.velocity / 10;
+    inputs[3] = closest.h / height;
+    inputs[4] = closest.speed / 100;
     let output = this.brain.predict(inputs);
     if (output[0] > output[1]) {
       this.jump();

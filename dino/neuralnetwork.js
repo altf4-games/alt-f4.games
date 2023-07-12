@@ -70,7 +70,7 @@ class NeuralNetwork {
     const hidden = tf.layers.dense({
       units: this.hidden_nodes,
       inputShape: [this.input_nodes],
-      activation: 'sigmoid'
+      activation: 'relu'
     });
     model.add(hidden);
     const output = tf.layers.dense({

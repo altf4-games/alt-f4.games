@@ -63,7 +63,6 @@ const downloadFile = () => {
 
 function saveToLocalStorage(key, value) {
   localStorage.setItem(key, value);
-  console.log(`Saved: ${value}`);
 }
 
 function autoSave() {

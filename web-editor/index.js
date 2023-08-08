@@ -145,8 +145,8 @@ function loadPreviousData()
     document.getElementById("css").value = localStorage.getItem("css");
   if(localStorage.getItem("js") != null)
     document.getElementById("js").value = localStorage.getItem("js");
-  if(localStorage.getItem("gen") != null)
-    document.getElementById("input-field").value = localStorage.getItem("gen");
+  if(localStorage.getItem("generated") != null)
+    document.getElementById("input-field").value = localStorage.getItem("generated");
 }
 
 setTimeout(loadPreviousData, 100);

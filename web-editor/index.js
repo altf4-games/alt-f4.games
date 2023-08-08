@@ -47,7 +47,13 @@ const addLibraries = () => {
 
 const downloadFile = () => {
     const link = document.createElement("a");
-    const content = "<html><head><style>" + document.getElementById("css").value + "</style>"  + "<script>" + document.getElementById("js").value  + "</script></head><body>" + document.getElementById("html").value + "</body></html>"; 
+    let content = "<!DOCTYPE html><html><head><style>" + document.getElementById("css").value + "</style>";
+    
+    for (let index = 0; index < scripts.length; index++) {
+      content += '<script src="' + scripts[index] + '"></script>';
+    }
+    
+    content += "<script>" + document.getElementById("js").value  + "</script></head><body>" + document.getElementById("html").value + "</body></html>"; 
     const file = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(file);
     link.download = "index.html";
@@ -55,10 +61,37 @@ const downloadFile = () => {
     URL.revokeObjectURL(link.href);
  };
 
- async function generateText() {
-    const promptText = document.getElementById("input-field").value;
+function saveToLocalStorage(key, value) {
+  localStorage.setItem(key, value);
+  console.log(`Saved: ${value}`);
+}
+
+function autoSave() {
+  const key_js = 'js';
+  const value_js = document.getElementById("js").value;
+
+  const key_html = 'html';
+  const value_html = document.getElementById("html").value;
+
+  const key_css = 'css';
+  const value_css = document.getElementById("css").value;
+
+  const key_gen = 'generated';
+  const value_gen = document.getElementById("input-field").value;
+
+  saveToLocalStorage(key_js, value_js);
+  saveToLocalStorage(key_html, value_html);
+  saveToLocalStorage(key_css, value_css);
+  saveToLocalStorage(key_gen, value_gen);
+}
+
+// Call autoSave function every 1 minutes
+setInterval(autoSave, 1 * 60 * 1000);
+
+async function generateText() {
+    let promptText = document.getElementById("input-field").value;
     const prompt_template = `<|system|>\n<|end|>\n<|user|>\n${promptText}<|end|>\n<|assistant|>`;
-  
+
     try {
       const response = await axios.post(apiEndpoint, {
         inputs: promptText,
@@ -104,6 +137,20 @@ function logToConsole(message, type = 'log') {
   consoleElement.appendChild(logItem);
   consoleElement.scrollTop = consoleElement.scrollHeight;
 }
+
+function loadPreviousData()
+{
+  if(localStorage.getItem("html") != null)
+    document.getElementById("html").value = localStorage.getItem("html");
+  if(localStorage.getItem("css") != null)
+    document.getElementById("css").value = localStorage.getItem("css");
+  if(localStorage.getItem("js") != null)
+    document.getElementById("js").value = localStorage.getItem("js");
+  if(localStorage.getItem("gen") != null)
+    document.getElementById("input-field").value = localStorage.getItem("gen");
+}
+
+setTimeout(loadPreviousData, 100);
 
 const scripts = [];
 const apiToken = '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'; //pls don't abuse this token :)

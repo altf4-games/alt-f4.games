@@ -1,9 +1,22 @@
 function run()
 {
+    if(document.getElementById("output"))
+    {
+      document.getElementById("output").remove();
+      prepareFrame();
+    }
+    
     let html = document.getElementById("html").value;
     let css = document.getElementById("css").value;
     let js = document.getElementById("js").value;
     let frameObj = document.getElementById("output");
+
+    for (let index = 0; index < scripts.length; index++) {
+      let script = document.createElement('script');
+      script.src = scripts[index];
+      let doc = document.getElementById("output").contentWindow.document.head;
+      doc.append(script);
+    }
 
     frameObj.contentWindow.document.body.innerHTML =  "<style>" + css + "</style>" + html;
     frameObj.contentWindow.eval(js);
@@ -15,6 +28,21 @@ function run()
     } catch (error) {
       console.error(error);
     }
+}
+
+function prepareFrame() {
+    let ifrm = document.createElement("iframe");
+    ifrm.id = "output";
+    document.getElementById("out").insertBefore(ifrm,document.getElementById("out").childNodes[2]);
+}
+
+const addLibraries = () => {
+  let userInput = prompt('Enter External Libraries:');
+
+  if (userInput !== null) {
+      scripts.push(userInput);
+      alert('Added: ' + userInput);
+  }
 }
 
 const downloadFile = () => {
@@ -77,5 +105,6 @@ function logToConsole(message, type = 'log') {
   consoleElement.scrollTop = consoleElement.scrollHeight;
 }
 
+const scripts = [];
 const apiToken = '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'; //pls don't abuse this token :)
 const apiEndpoint = "https://api-inference.huggingface.co/models/HuggingFaceH4/starchat-beta";

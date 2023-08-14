@@ -1,4 +1,4 @@
-@font-face { font-family: Blackout; src: url('Blackout\ 2\ AM.ttf'); } 
+@font-face { font-family: Blackout; src: url('/Blackout2AM.ttf'); } 
 body {
     font-family: 'Open Sans', sans-serif;
     background-color:#181818;   
@@ -150,4 +150,10 @@ li {
     max-width: 1000px;
     position: relative;
     margin: auto;
+}
+
+.prevent-select {
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }

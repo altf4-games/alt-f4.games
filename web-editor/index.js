@@ -3,7 +3,7 @@ let editor = CodeMirror.fromTextArea(document.getElementById("js"), {
   lineNumbers: true,
 });
 let theme = "dracula";
-editor.setSize(null,340)
+editor.setSize(null,"48.75%")
 editor.setOption('theme', theme);
 
 let currentTab = "javascript";

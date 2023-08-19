@@ -1,3 +1,23 @@
+let htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
+  mode: "text/html",
+  lineNumbers: true,
+});
+    
+let jsEditor = CodeMirror.fromTextArea(document.getElementById("js"), {
+  mode: "text/javascript",
+  lineNumbers: true,
+});
+    
+let cssEditor = CodeMirror.fromTextArea(document.getElementById("css"), {
+  mode: "text/css",
+  lineNumbers: true,
+});
+let theme = "dracula";
+htmlEditor.setOption('theme', theme);
+jsEditor.setOption('theme', theme);
+cssEditor.setOption('theme', theme);
+
+
 function run()
 {
     if(document.getElementById("output"))
@@ -6,9 +26,9 @@ function run()
       prepareFrame();
     }
     
-    let html = document.getElementById("html").value;
-    let css = document.getElementById("css").value;
-    let js = document.getElementById("js").value;
+    let html = htmlEditor.getValue();
+    let css = cssEditor.getValue();
+    let js = jsEditor.getValue();
     let frameObj = document.getElementById("output");
 
     for (let index = 0; index < scripts.length; index++) {
@@ -47,13 +67,13 @@ const addLibraries = () => {
 
 const downloadFile = () => {
     const link = document.createElement("a");
-    let content = "<!DOCTYPE html><html><head><style>" + document.getElementById("css").value + "</style>";
+    let content = "<!DOCTYPE html><html><head><style>" + cssEditor.getValue() + "</style>";
     
     for (let index = 0; index < scripts.length; index++) {
       content += '<script src="' + scripts[index] + '"></script>';
     }
     
-    content += "<script>" + document.getElementById("js").value  + "</script></head><body>" + document.getElementById("html").value + "</body></html>"; 
+    content += "<script>" + jsEditor.getValue()  + "</script></head><body>" + htmlEditor.getValue() + "</body></html>"; 
     const file = new Blob([content], { type: 'text/plain' });
     link.href = URL.createObjectURL(file);
     link.download = "index.html";
@@ -67,13 +87,13 @@ function saveToLocalStorage(key, value) {
 
 function autoSave() {
   const key_js = 'js';
-  const value_js = document.getElementById("js").value;
+  const value_js = jsEditor.getValue();
 
   const key_html = 'html';
-  const value_html = document.getElementById("html").value;
+  const value_html = htmlEditor.getValue();
 
   const key_css = 'css';
-  const value_css = document.getElementById("css").value;
+  const value_css = cssEditor.getValue();
 
   const key_gen = 'generated';
   const value_gen = document.getElementById("input-field").value;
@@ -140,11 +160,11 @@ function logToConsole(message, type = 'log') {
 function loadPreviousData()
 {
   if(localStorage.getItem("html") != null)
-    document.getElementById("html").value = localStorage.getItem("html");
+    htmlEditor.setValue(localStorage.getItem("html"));
   if(localStorage.getItem("css") != null)
-    document.getElementById("css").value = localStorage.getItem("css");
+    cssEditor.setValue(localStorage.getItem("css"));
   if(localStorage.getItem("js") != null)
-    document.getElementById("js").value = localStorage.getItem("js");
+    jsEditor.setValue(localStorage.getItem("js"));
   if(localStorage.getItem("generated") != null)
     document.getElementById("input-field").value = localStorage.getItem("generated");
 }

@@ -4,7 +4,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 .editor {
@@ -54,7 +54,7 @@ label {
     background-color: #3498db;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -66,7 +66,7 @@ label {
     background-color: #EE4B2B;
     color: #fff;
     border: none;
-    border-radius: 4px;
+    border-radius: 2px;
     padding: 10px 20px;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -103,5 +103,28 @@ label {
     padding: 10px;
     font-size: 16px;
     overflow: auto;
-    height: 300px;
+    height: 39.75%;
+}
+
+.logo-button {
+    display: inline-block;
+    margin: 2px;
+    padding: 10px;
+    border-radius: 2px;
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.logo {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#output 
+{
+    height: 45%;
 }

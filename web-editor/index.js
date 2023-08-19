@@ -1,34 +1,59 @@
-let htmlEditor = CodeMirror.fromTextArea(document.getElementById("html"), {
-  mode: "text/html",
-  lineNumbers: true,
-});
-    
-let jsEditor = CodeMirror.fromTextArea(document.getElementById("js"), {
+let editor = CodeMirror.fromTextArea(document.getElementById("js"), {
   mode: "text/javascript",
   lineNumbers: true,
 });
-    
-let cssEditor = CodeMirror.fromTextArea(document.getElementById("css"), {
-  mode: "text/css",
-  lineNumbers: true,
-});
 let theme = "dracula";
-htmlEditor.setOption('theme', theme);
-jsEditor.setOption('theme', theme);
-cssEditor.setOption('theme', theme);
+editor.setSize(null,340)
+editor.setOption('theme', theme);
 
+let currentTab = "javascript";
+let html="";
+let css="";
+let js="";
+
+function SaveText()
+{
+  if(currentTab == "javascript") js = editor.getValue();
+  if(currentTab == "html") html = editor.getValue();
+  if(currentTab == "css") css = editor.getValue();
+}
+
+function loadText()
+{
+  if(currentTab == "javascript") editor.setValue(js);
+  if(currentTab == "html") editor.setValue(html);
+  if(currentTab == "css") editor.setValue(css);
+}
+
+function switchTab(tab)
+{
+  SaveText();
+  currentTab = tab;
+  let label = document.getElementById("tab-label");
+  if(currentTab == "javascript") {
+    label.innerHTML = "JAVASCRIPT";
+    editor.mode = "text/javascript";
+  }
+  if(currentTab == "html") {
+    label.innerHTML = "HTML";
+    editor.mode = "text/html";
+  }
+  if(currentTab == "css") {
+    label.innerHTML = "CSS";
+    editor.mode = "text/css";
+  }
+  loadText();
+}
 
 function run()
 {
+    SaveText();
     if(document.getElementById("output"))
     {
       document.getElementById("output").remove();
       prepareFrame();
     }
-    
-    let html = htmlEditor.getValue();
-    let css = cssEditor.getValue();
-    let js = jsEditor.getValue();
+
     let frameObj = document.getElementById("output");
 
     for (let index = 0; index < scripts.length; index++) {
@@ -87,13 +112,13 @@ function saveToLocalStorage(key, value) {
 
 function autoSave() {
   const key_js = 'js';
-  const value_js = jsEditor.getValue();
+  const value_js = js;
 
   const key_html = 'html';
-  const value_html = htmlEditor.getValue();
+  const value_html = html;
 
   const key_css = 'css';
-  const value_css = cssEditor.getValue();
+  const value_css = css;
 
   const key_gen = 'generated';
   const value_gen = document.getElementById("input-field").value;
@@ -160,13 +185,14 @@ function logToConsole(message, type = 'log') {
 function loadPreviousData()
 {
   if(localStorage.getItem("html") != null)
-    htmlEditor.setValue(localStorage.getItem("html"));
+    html = localStorage.getItem("html");
   if(localStorage.getItem("css") != null)
-    cssEditor.setValue(localStorage.getItem("css"));
+    css = localStorage.getItem("css");
   if(localStorage.getItem("js") != null)
-    jsEditor.setValue(localStorage.getItem("js"));
+    js = localStorage.getItem("js");
   if(localStorage.getItem("generated") != null)
     document.getElementById("input-field").value = localStorage.getItem("generated");
+  loadText();
 }
 
 setTimeout(loadPreviousData, 100);

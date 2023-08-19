@@ -24,15 +24,13 @@
             <div class="in">
                 <label>CODE PILOT <a href="https://huggingface.co/HuggingFaceH4/starchat-beta"><p style="margin-left: 5px;">  ~START CHAT - BETA</p> </a></label>
                 <textarea id="input-field"></textarea>
-                <button class="generate-button" onclick="generateText()">Generate</button> <button class="clear-button" onclick='document.getElementById("input-field").value = "";'>Clear</button>
-                <label>JAVASCRIPT</label>
-                <textarea id="js"  onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
-                
-                <label>HTML</label>
-                <textarea id="html" onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
+                <button class="generate-button" onclick="generateText()">Generate</button> <button class="clear-button" onclick='document.getElementById("input-field").value = "";'>Clear</button> <button class="logo-button" onclick="switchTab('html')">HTML</button> <button class="logo-button" onclick="switchTab('css')">CSS</button>
+                <button class="logo-button" onclick="switchTab('javascript')">JAVASCRIPT</button>
+                <div class="button-container">
 
-                <label>CSS</label>
-                <textarea id="css"  onkeydown="if(event.keyCode===9){var v=this.value,s=this.selectionStart,e=this.selectionEnd;this.value=v.substring(0, s)+'\t'+v.substring(e);this.selectionStart=this.selectionEnd=s+1;return false;}"></textarea>
+                </div>
+                <label id="tab-label">JAVASCRIPT</label>
+                <textarea id="js"></textarea>
             </div>
             <div class="out" id="out">
                 <label>OUTPUT</label>

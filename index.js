@@ -9,6 +9,10 @@ function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
+setInterval(() => {
+    showSlides(++slideIndex)
+},10000);
+
 function showSlides(n) {
     let i;
     let slides = document.getElementsByClassName("img");

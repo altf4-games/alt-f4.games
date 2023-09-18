@@ -152,3 +152,32 @@ footer {
     margin-top: 30px;
     color: #777;
 }
+
+.review-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.quote-box {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quote {
+    background-color: #1f2121;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
+}
+
+.quote a {
+    text-decoration: none;
+    color: #007BFF;
+    font-weight: bold;
+}
+.quote a:hover {
+    text-decoration: underline;
+}

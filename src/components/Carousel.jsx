@@ -18,14 +18,32 @@ const Carousel = () => {
             <div id="screenshot-carousel" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active" >
-                    <img src="https://github.com/altf4-games/alt-f4.games/blob/main/images/Screenie_01sh.png?raw=true" className="d-block w-100" alt="..." />
+                        <img src="images/SS_01.png" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src="https://github.com/altf4-games/alt-f4.games/blob/main/images/Screenie_02.png?raw=true" className="d-block w-100" alt="..." />
+                        <img src="images/SS_02.png" className="d-block w-100" alt="..." />
                     </div>
                     <div className="carousel-item">
-                    <img src="https://github.com/altf4-games/alt-f4.games/blob/main/images/Screenie_02g.png?raw=true" className="d-block w-100" alt="..." />
+                        <img src="images/SS_03.png" className="d-block w-100" alt="..." />
                     </div>
+                    <div className="carousel-item">
+                        <img src="images/SS_04.png" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="images/SS_05.png" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="images/SS_06.png" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="images/SS_07.png" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="images/SS_08.png" className="d-block w-100" alt="..." />
+                    </div>
+                    <div className="carousel-item">
+                        <img src="images/SS_09.png" className="d-block w-100" alt="..." />
+                    </div> 
                 </div>
                 <button className="carousel-control-prev" type="button" data-bs-target="#screenshot-carousel" data-bs-slide="prev">
                     <span className="carousel-control-prev-icon" aria-hidden="true"></span>

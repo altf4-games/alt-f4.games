@@ -29,10 +29,11 @@ a:hover {
 body {
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  /*display: flex;*/
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  color: white;
+  background-color: #181818;
 }
 
 h1 {

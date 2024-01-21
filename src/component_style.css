@@ -42,3 +42,9 @@ footer {
         font-size: 0.8rem;
     }
 }
+@media (max-width: 767px) {
+    .row-cols-3>.col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

@@ -1,5 +1,6 @@
 import Carousel from "../components/Carousel";
 import GameReviews from "../components/GameReviews";
+import GamesTable from "../components/GamesTable";
 
 const Home = () => {
     return (
@@ -9,6 +10,8 @@ const Home = () => {
             </div>
             <Carousel />
             <GameReviews />
+            <br></br>
+            <GamesTable />
         </>
     );
 };

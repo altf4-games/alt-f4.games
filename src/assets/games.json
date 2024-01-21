@@ -1,71 +1,83 @@
 [
     {
+        "id": 0,
         "title": "Not Alone",
         "description": "You're walking home late at night on the streets with a serial killer on the loose.",
         "image": "https://img.itch.zone/aW1nLzkzMzA4NzEucG5n/315x250%23c/WNAtKz.png",
         "link": "https://altf4-games.itch.io/not-alone"
     },
     {
+        "id": 1,
         "title": "Midnight Visitor",
         "description": "In this detective horror game, solve a murder mystery within a haunted house.",
         "image": "https://img.itch.zone/aW1nLzc2MjQ2NzcucG5n/315x250%23c/g5kgej.png",
         "link": "https://altf4-games.itch.io/midnight-visitor"
     },
     {
+        "id": 2,
         "title": "Dead Inside",
         "description": "A short horror experience about being stranded inside your house stuck in a time loop.",
         "image": "https://img.itch.zone/aW1nLzMzMTkzOTYuZ2lm/315x250%23cm/F58ZuA.gif",
         "link": "https://altf4-games.itch.io/dead-inside"
     },
     {
+        "id": 3,
         "title": "Captive",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzM3ODQzMzIuZ2lm/original/LD2RHQ.gif",
         "link": "https://altf4-games.itch.io/captive"
     },
     {
+        "id": 4,
         "title": "Silent House",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzI5NjM2MzMuZ2lm/315x250%23cm/%2FidsOR.gif",
         "link": "https://altf4-games.itch.io/silent-house"
     },
     {
+        "id": 5,
         "title": "Night Watch",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzEzNDg1OTkwLmdpZg==/315x250%23cm/lUAxy4.gif",
         "link": "https://altf4-games.itch.io/night-watch"
     },
     {
+        "id": 6,
         "title": "Heart Quake",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzE0NTAzMDc3LnBuZw==/315x250%23c/45Nhe9.png",
         "link": "https://altf4-games.itch.io/heart-quake"
     },
     {
+        "id": 7,
         "title": "The Outer Limits",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzEzMjQ3NjMxLnBuZw==/315x250%23c/IOzKzE.png",
         "link": "https://altf4-games.itch.io/the-outer-limits"
     },
     {
+        "id": 8,
         "title": "Echoes of Fear (Prototype)",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzEzMzU4Njg0LmdpZg==/315x250%23cm/tuPg44.gif",
         "link": "https://altf4-games.itch.io/echoes-of-fear"
     },
     {
+        "id": 9,
         "title": "Welcome To The Dark Web",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzUxOTYzNDguZ2lm/315x250%23cm/zYvmuK.gif",
         "link": "https://altf4-games.itch.io/wttdw"
     },
     {
+        "id": 10,
         "title": "Hotel Nightmare",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzI0MjExNzkucG5n/315x250%23c/ihQ80o.png",
         "link": "https://altf4-games.itch.io/hotel-nightmare"
     },
     {
+        "id": 11,
         "title": "The night of '87",
         "description": "",
         "image": "https://img.itch.zone/aW1nLzcyNDk1OTgucG5n/315x250%23c/A%2FRSHf.png",

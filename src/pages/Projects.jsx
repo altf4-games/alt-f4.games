@@ -23,7 +23,7 @@ const Projects = () => {
       <h2 className="mb-4">GitHub Repositories</h2>
       <div className="row">
         {repositories.map((repo) => (
-            <ProjectCard repo={repo} />
+            <ProjectCard repo={repo} key={repo.id} />
         ))}
       </div>
     </div>

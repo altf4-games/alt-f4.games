@@ -19,7 +19,7 @@ const GamesTable = ({ topGames }) => {
                 <div className="row row-cols-3">
                     {
                         games.map((game) => (
-                            <GameCard game={game} />
+                            <GameCard game={game} key={game.id} />
                         ))
                     }
                 </div>

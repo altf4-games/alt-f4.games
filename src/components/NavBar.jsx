@@ -1,6 +1,7 @@
 const NavBar = () => {
     return (
-        <header>
+        <div className="container" style={{ marginTop: '2rem' }}>
+            <header>
             <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                 <div className="container">
                     <a className="navbar-brand" href="/">AltF4 Games</a>
@@ -23,7 +24,8 @@ const NavBar = () => {
                     </div>
                 </div>
             </nav>
-        </header>
+            </header>
+        </div>
     );
 };
 

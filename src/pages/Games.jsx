@@ -1,6 +1,10 @@
+import GamesTable from "../components/GamesTable";
+
 const Games = () => {
     return (
-      <h1>Games</h1>  
+      <>
+        <GamesTable/>
+      </>
     );
 }
 

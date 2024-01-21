@@ -5,10 +5,9 @@ const Projects = () => {
   const [repositories, setRepositories] = useState([]);
 
   useEffect(() => {
-    // Fetch repositories data from GitHub API or your backend
     const fetchRepositories = async () => {
       try {
-        const response = await fetch('https://api.github.com/users/altf4-games/repos'); // Replace {username} with the GitHub username
+        const response = await fetch('https://api.github.com/users/altf4-games/repos');
         const data = await response.json();
         setRepositories(data);
       } catch (error) {

@@ -11,7 +11,7 @@ const Home = () => {
             <Carousel />
             <GameReviews />
             <br></br>
-            <GamesTable />
+            <GamesTable topGames={true}/>
         </>
     );
 };

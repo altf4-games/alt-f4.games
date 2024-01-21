@@ -1,0 +1,50 @@
+footer {
+    text-align: center;
+    margin-top: 30px;
+    color: #777;
+}
+
+@font-face {
+    font-family: Blackout;
+    src: url("assets/Blackout2AM.ttf");
+}
+
+.title {
+    font-family: 'Blackout', 'Open Sans';
+    font-size:xx-large;
+}
+
+.card {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+@media (max-width: 576px) {
+    .card {
+        max-width: 100%;
+    }
+}
+
+.quote-text {
+    font-size: 1.5rem;
+}
+
+.quote-author {
+    font-size: 1rem;
+}
+
+@media (max-width: 576px) {
+    .quote-text {
+        font-size: 1rem;
+    }
+
+    .quote-author {
+        font-size: 0.8rem;
+    }
+}
+@media (max-width: 767px) {
+    .row-cols-3>.col {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}

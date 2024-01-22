@@ -15,7 +15,7 @@ const GamesTable = ({ topGames }) => {
                 }
             </style>
             <div className="container">
-                <h2 className="text-center mb-4">GAMES</h2>
+                <h2 className="text-center mb-4 mt-3">GAMES</h2>
                 <div className="row row-cols-3">
                     {
                         games.map((game) => (

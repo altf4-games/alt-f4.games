@@ -27,6 +27,11 @@ const NavBar = () => {
                         <div className={`collapse navbar-collapse ${isNavOpen ? 'show' : ''}`} id="navbarNav">
                             <ul className="navbar-nav ml-auto">
                                 <li className="nav-item">
+                                    <a className="nav-link" href="/">
+                                        Home
+                                    </a>
+                                </li>
+                                <li className="nav-item">
                                     <a className="nav-link" href="/games/">
                                         Games
                                     </a>

@@ -14,6 +14,18 @@ const MarkdownDisplay = () => {
 
   return (
     <div className="container mt-5 text-start">
+      <style>
+        {`
+          img {
+            max-width: 100%;
+            height: auto;
+          }
+
+          iframe {
+            max-width: 100%;
+          }
+        `}
+      </style>
       <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdownContent}</ReactMarkdown>
     </div>
   );

@@ -10,7 +10,6 @@ const Home = () => {
             </div>
             <Carousel />
             <GameReviews />
-            <br></br>
             <GamesTable topGames={true}/>
         </>
     );

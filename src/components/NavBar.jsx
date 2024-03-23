@@ -12,8 +12,8 @@ const NavBar = () => {
             <header>
                 <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
                     <div className="container">
-                        <a className="navbar-brand" href="/">
-                            AltF4 Games
+                        <a className="navbar-brand navbar-title" href="/">
+                            { ">_ "}AltF4 Games
                         </a>
                         <button
                             className="navbar-toggler"

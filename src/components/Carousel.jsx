@@ -15,6 +15,7 @@ const Carousel = () => {
 
     return (
         <div className="container mx-auto">
+            <h2 className="text-center my-5">SHOWCASE</h2>
             <div id="screenshot-carousel" className="carousel slide" data-bs-ride="carousel">
                 <div className="carousel-inner">
                     <div className="carousel-item active" >

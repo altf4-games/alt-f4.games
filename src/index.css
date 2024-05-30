@@ -28,7 +28,7 @@ a:hover {
 
 body {
   margin: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: monospace;
   place-items: center;
   min-width: 320px;
   min-height: 100vh;

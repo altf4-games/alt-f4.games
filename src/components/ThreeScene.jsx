@@ -23,6 +23,7 @@ const ThreeScene = () => {
         });
         const earth = new THREE.Mesh(earthGeometry, earthMaterial);
         earth.setRotationFromEuler(new THREE.Euler(0, 180, 0));
+        earth.position.x = 1; // Adjust this value as needed
         scene.add(earth);
 
 

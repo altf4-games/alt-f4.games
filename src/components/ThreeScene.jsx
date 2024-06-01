@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
-import earthTexture from '../assets/earth_texture.png';
+import earthTexture from '../assets/4k_mars.png';
 const ThreeScene = () => {
     const canvasRef = useRef();
 

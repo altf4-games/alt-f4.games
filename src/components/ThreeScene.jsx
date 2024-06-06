@@ -23,9 +23,8 @@ const ThreeScene = () => {
         });
         const earth = new THREE.Mesh(earthGeometry, earthMaterial);
         earth.setRotationFromEuler(new THREE.Euler(0, 180, 0));
-        earth.position.x = 1; // Adjust this value as needed
+        earth.position.x = 1;
         scene.add(earth);
-
 
         // Particle system
         const particlesGeometry = new THREE.BufferGeometry();
@@ -42,7 +41,6 @@ const ThreeScene = () => {
         const particles = new THREE.Points(particlesGeometry, particlesMaterial);
         scene.add(particles);
 
-        // Camera position
         camera.position.z = 5;
 
         const animate = () => {

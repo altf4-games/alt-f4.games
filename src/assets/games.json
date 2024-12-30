@@ -1,7 +1,7 @@
 [
     {
         "id": 0,
-        "title": "Not Alone",
+        "title": "Fragments of Fear: Not Alone",
         "description": "You're walking home late at night on the streets with a serial killer on the loose.",
         "image": "https://img.itch.zone/aW1nLzkzMzA4NzEucG5n/315x250%23c/WNAtKz.png",
         "link": "https://altf4-games.itch.io/not-alone"
@@ -82,5 +82,19 @@
         "description": "A PSX horror game featuring a lot of zombies.",
         "image": "https://img.itch.zone/aW1nLzcyNDk1OTgucG5n/315x250%23c/A%2FRSHf.png",
         "link": "https://altf4-games.itch.io/the-night-of-87"
+    },
+    {
+        "id": 12,
+        "title": "Fragments of Fear: Wash and Watch",
+        "description": "A short episodic horror game",
+        "image":"https://img.itch.zone/aW1nLzE5MDY2NDQzLnBuZw==/105x83%23/v3%2Fwar.png",
+        "link":"https://altf4-games.itch.io/fragments-of-fear-wash-and-watch"
+    },
+    {
+        "id": 13,
+        "title": "Game.exe",
+        "description": "What happens when you get stuck playing a game inside of a game.",
+        "image":"https://img.itch.zone/aW1nLzIyNjQwNjguZ2lm/105x83%23/aO6BbN.gif",
+        "link":"https://altf4-games.itch.io/game-exe"
     }
 ]

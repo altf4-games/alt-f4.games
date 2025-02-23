@@ -312,7 +312,7 @@ function Games() {
         'https://img.itch.zone/aW1hZ2UvMjQ0NzY1NC8xNDUwMjg3MC5wbmc=/347x500/h4B0jP.png',
       ],
 
-      playUrl: 'https://itch.io/embed-upload/11018137?color=000000'
+      webglUrl: 'https://itch.io/embed-upload/11018137?color=000000'
     },
     {
       id: 5,

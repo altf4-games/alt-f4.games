@@ -12,7 +12,7 @@ const Footer = () => {
           <div>
             <h3 className="text-xl font-bold mb-4 text-white">AltF4 Games</h3>
             <p className="text-gray-400">
-              Creating immersive digital experiences through games and web development.
+              Stay haunted – the nightmare awaits your return.
             </p>
           </div>
           <div>

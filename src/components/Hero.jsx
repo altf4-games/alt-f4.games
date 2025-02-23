@@ -28,7 +28,7 @@ const HeroSection = () => {
           </span>
         </h1>
         <p className="text-xl md:text-2xl mb-8 text-gray-300">
-          Creating Immersive Digital Experiences
+          Unleashing Indie Horror, One Nightmare at a Time.
         </p>
         <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
           <a 
@@ -43,7 +43,7 @@ const HeroSection = () => {
             className="px-8 py-3 border border-red-600 rounded hover:bg-red-900/30 transition-colors text-white flex items-center gap-2"
           >
             <Code size={20} />
-            Web Projects
+            Other Projects
           </a>
         </div>
       </div>

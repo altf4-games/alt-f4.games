@@ -1,23 +1,46 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Github, 
-  Terminal,
-  Monitor,
-  Mail,
-} from 'lucide-react';
+import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
+import { Github, Terminal, Monitor, Mail } from 'lucide-react';
 
 const ContactSection = () => {
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', e.target, 'YOUR_PUBLIC_KEY')
+      .then(
+        (result) => {
+          console.log(result.text);
+          alert('Message sent successfully!');
+        },
+        (error) => {
+          console.error(error.text);
+          alert('An error occurred, please try again.');
+        }
+      );
+      
+    e.target.reset();
+  };
+
   return (
     <section className="bg-black py-20 px-4" id="contact">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-bold mb-8 text-white">Get In Touch</h2>
         
+        {/* Additional text for support/freelancing */}
+        <p className="text-gray-300 mb-8">
+          I'm available for support, freelancing projects, or any other inquiries you might have.
+          Whether you're looking for assistance with your project or want to collaborate, feel free
+          to reach out using the form below.
+        </p>
+        
         <div className="bg-gray-900 rounded-lg p-8 mb-12">
-          <form className="space-y-6">
+          <form className="space-y-6" onSubmit={sendEmail}>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
                 <input
                   type="text"
+                  name="user_name"
                   placeholder="Name"
                   className="w-full px-4 py-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-red-500 text-white"
                 />
@@ -25,6 +48,7 @@ const ContactSection = () => {
               <div>
                 <input
                   type="email"
+                  name="user_email"
                   placeholder="Email"
                   className="w-full px-4 py-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-red-500 text-white"
                 />
@@ -33,12 +57,14 @@ const ContactSection = () => {
             <div>
               <input
                 type="text"
+                name="subject"
                 placeholder="Subject"
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-red-500 text-white"
               />
             </div>
             <div>
               <textarea
+                name="message"
                 placeholder="Message"
                 rows={5}
                 className="w-full px-4 py-3 bg-black border border-gray-700 rounded focus:outline-none focus:border-red-500 text-white"

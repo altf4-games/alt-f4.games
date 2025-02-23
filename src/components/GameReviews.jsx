@@ -26,6 +26,9 @@ const GameReviews = ({ gameId }) => {
   return (
     <>
       <h2 className="text-4xl font-bold mb-8 text-white text-center">Player Reviews</h2>
+      <p className="text-gray-400 text-center mb-8">
+        Hear what our players have to say about their unforgettable experiences.
+      </p>
       <div className="container mx-auto max-w-3xl px-4 py-8 bg-gray-900 rounded-lg shadow-lg mt-8">
         
         <div className="space-y-6">

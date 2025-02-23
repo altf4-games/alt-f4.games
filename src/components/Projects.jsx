@@ -40,6 +40,9 @@ const GitHubProjects = () => {
   return (
     <div id="projects">
       <h2 className="text-4xl font-bold mb-8 text-white text-center mt-8">Featured Projects</h2>
+      <p className="text-gray-400 text-center mt-2">
+        Explore my top GitHub projects.
+      </p>
       <div className="container mx-auto mt-4 px-4">
       {repositories.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

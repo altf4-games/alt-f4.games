@@ -1,11 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import Navbar from './components/NavBar';
-import HeroSection from './components/Hero';
-import GamesSection from './components/GamesSection';
-import GitHubProjects from './components/Projects';
-import ContactSection from './components/Contact';
-import Footer from './components/Footer';
-import GameReviews from './components/GameReviews';
+import { Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import SilentHousePP from './privacy-policy/SilentHousePP';
 
 // Color scheme constants
 const colors = {
@@ -19,7 +15,6 @@ const colors = {
 
 // Main App
 const App = () => {
-  const [currentSection, setCurrentSection] = useState('home');
   useEffect(() => {
     const style = document.createElement('style');
     style.textContent = `
@@ -41,43 +36,28 @@ const App = () => {
     return () => document.head.removeChild(style);
   }, []);
 
-  return (
-    <div className="bg-black min-h-screen">
-      <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
-      <main>
-        <HeroSection />
-        <GamesSection />
-        <GameReviews />
-        <GitHubProjects />
-        <ContactSection />
-      </main>
-      <Footer />
-      
-      <div className="fixed w-4 h-4 bg-red-500 rounded-full pointer-events-none mix-blend-difference z-50 hidden md:block"
-        style={{
-          transform: 'translate(-50%, -50%)',
-          transition: 'transform 0.1s ease-out',
-        }}
-        id="custom-cursor"
-      />
-    </div>
-  );
-};
-
-const GlobalStyles = () => {
   useEffect(() => {
     const cursor = document.getElementById('custom-cursor');
     
     const moveCursor = (e) => {
-      cursor.style.left = e.clientX + 'px';
-      cursor.style.top = e.clientY + 'px';
+      if (cursor) {
+        cursor.style.left = e.clientX + 'px';
+        cursor.style.top = e.clientY + 'px';
+      }
     };
 
     document.addEventListener('mousemove', moveCursor);
     return () => document.removeEventListener('mousemove', moveCursor);
   }, []);
 
-  return null;
+  return (
+    <div className="bg-black min-h-screen">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/games/silent-house/privacy-policy" element={<SilentHousePP />} />
+      </Routes>
+    </div>
+  );
 };
 
 export default App;

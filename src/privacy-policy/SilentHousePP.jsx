@@ -17,7 +17,7 @@ const SilentHousePP = () => {
                             font-size: 16px;
                         }
 
-                        container {
+                        .container {
                             margin: 100px;
                         }
 

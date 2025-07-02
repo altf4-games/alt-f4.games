@@ -234,7 +234,7 @@ function Games() {
       id: 1,
       title: 'Fragments of Fear: Not Alone',
       description:
-        'Step into the chilling prologue of the Fragments of Fear episodic horror anthology, where every sound, shadow, and choice matters. Chapter 0: Not Alone sets the stage for the terror to come, introducing you to a world where survival is never guaranteed. Ethan is sleeping at work, unaware that someone has been watching him. As he walks home late at night with a serial killer on the loose, strange events unfold—doubled footsteps, eerie noises, and a creeping sense of dread. When Ethan reaches his house, his stalker isn’t far behind. Will he make it through the night? It’s up to you to ensure his survival.',
+        'Step into the chilling prologue of the Fragments of Fear episodic horror anthology, where every sound, shadow, and choice matters. Chapter 0: Not Alone sets the stage for the terror to come, introducing you to a world where survival is never guaranteed. Ethan is sleeping at work, unaware that someone has been watching him. As he walks home late at night with a serial killer on the loose, strange events unfold—doubled footsteps, eerie noises, and a creeping sense of dread. When Ethan reaches his house, his stalker isn\'t far behind. Will he make it through the night? It\'s up to you to ensure his survival.',
       image:
         'https://img.itch.zone/aW1nLzkzMzA4NzEucG5n/315x250%23c/WNAtKz.png',
       heroImage:
@@ -353,14 +353,9 @@ function Games() {
     },
   ];
 
-  return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<GamesSection games={games} />} />
-        <Route path="/games/:gameId" element={<GameDetails games={games} />} />
-      </Routes>
-    </Router>
-  );
+  return <GamesSection games={games} />;
 }
 
+// Export both the component with data and the base component
+export { GameDetails, GamesSection };
 export default Games;

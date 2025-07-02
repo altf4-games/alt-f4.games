@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from './NavBar';
 import HeroSection from './Hero';
-import GamesSection from './GamesSection';
+import Games from './GamesSection';
 import GitHubProjects from './Projects';
 import ContactSection from './Contact';
 import Footer from './Footer';
@@ -15,7 +15,7 @@ const HomePage = () => {
       <Navbar currentSection={currentSection} setCurrentSection={setCurrentSection} />
       <main>
         <HeroSection />
-        <GamesSection />
+        <Games />
         <GameReviews />
         <GitHubProjects />
         <ContactSection />

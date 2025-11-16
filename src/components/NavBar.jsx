@@ -39,7 +39,7 @@ const Navbar = ({ currentSection, setCurrentSection }) => {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex space-x-8">
-            {['home', 'games', 'projects', 'contact'].map((section) => (
+            {['home', 'games', 'contact'].map((section) => (
               <button
                 key={section}
                 onClick={() => scrollToSection(section)}

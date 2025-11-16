@@ -25,9 +25,6 @@ const Footer = () => {
                 <a href="#games" className="text-gray-400 hover:text-red-500">Games</a>
               </li>
               <li>
-                <a href="#projects" className="text-gray-400 hover:text-red-500">Projects</a>
-              </li>
-              <li>
                 <a href="#contact" className="text-gray-400 hover:text-red-500">Contact</a>
               </li>
             </ul>

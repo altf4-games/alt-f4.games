@@ -17,7 +17,7 @@ const HomePage = () => {
         <HeroSection />
         <Games />
         <GameReviews />
-        <GitHubProjects />
+        {/* <GitHubProjects /> */}
         <ContactSection />
       </main>
       <Footer />

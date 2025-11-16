@@ -96,7 +96,7 @@ const ContactSection = () => {
             itch.io
           </a>
           <a
-            href="https://pradyum.vercel.app"
+            href="https://pradyum.me"
             className="flex items-center justify-center gap-2 p-4 bg-gray-900 rounded-lg hover:bg-gray-800 transition-colors text-white"
           >
             <Monitor size={24} />
